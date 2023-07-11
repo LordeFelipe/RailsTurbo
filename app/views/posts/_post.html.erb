@@ -1,0 +1,6 @@
+<turbo-frame id="posts-<%=post.id%>">
+  <div class="bg-white p-4 rounded-lg shadow-lg">
+    <h2 class="text-lg font-bold mb-2"><%= post.name %></h2>
+  </div>
+  <%= button_to "Remover", post_path(post.id), method: :delete %>
+</turbo-frame>

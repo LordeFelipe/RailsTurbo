@@ -1,0 +1,13 @@
+<div class="container mx-auto">
+  <h1 class="text-3xl font-bold mb-8">My Posts</h1>
+
+  <%= render "forms", post: Post.new %>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <turbo-frame id="posts">
+      <% @posts.each do |post| %>
+        <%= render "post", post: post %>
+      <% end %>
+    </turbo-frame>
+  </div>
+</div>
